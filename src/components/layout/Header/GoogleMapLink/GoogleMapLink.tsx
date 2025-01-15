@@ -16,7 +16,7 @@ export const GoogleMapLink = () => {
         width={20}
         height={20}
       />
-      <p className={'font-arial text-grey-dark hover:text-blue transition-all'}>
+      <p className={'font-arial text-grey-dark transition-all hover:text-blue'}>
         проспект Свободи, 61/17
       </p>
     </Link>

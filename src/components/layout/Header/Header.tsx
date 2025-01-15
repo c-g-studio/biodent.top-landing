@@ -5,6 +5,7 @@ import { GoogleMapLink } from '@/components/layout/Header/GoogleMapLink/GoogleMa
 import { Calendar } from '@/components/layout/Header/Calendar/Calendar';
 import { Phone } from '@/components/layout/Header/Phone/Phone';
 import { Button } from '@/components/shared/Button/Button';
+import { MobileMenu } from '@/components/layout/Header/MobileMenu/MobileMenu';
 
 export const Header = () => {
   return (
@@ -12,11 +13,14 @@ export const Header = () => {
       <div className="container flex items-center justify-between py-8">
         <Image src={'/img/logo.png'} alt={'Logo'} width={57} height={51} />
         <SocialList />
-        <Navigation />
-        <GoogleMapLink />
-        <Calendar />
+        <Navigation className={'hidden md:flex'} />
+        <div className={'hidden items-center justify-center gap-5 xl:flex'}>
+          <GoogleMapLink />
+          <Calendar />
+        </div>
         <Phone />
         <Button>Замовити дзвінок</Button>
+        <MobileMenu />
       </div>
     </header>
   );
