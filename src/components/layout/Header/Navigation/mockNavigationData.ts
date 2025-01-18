@@ -1,4 +1,10 @@
-export const mockNavigationData = [
+type TMockNavigationData = {
+  id: number;
+  title: string;
+  link: string;
+};
+
+export const mockNavigationData: TMockNavigationData[] = [
   {
     id: 1,
     title: 'Послуги',
