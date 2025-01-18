@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import {PluginAPI} from "tailwindcss/types/config";
 
 export default {
   content: [
@@ -26,9 +27,9 @@ export default {
         // '2xl': '1440px',
       },
       backgroundImage: {
-        'hero-bgc': "url(/img/hero_image.jpg)",
-        'hero-tablet': "url(/img/hero_image_tablet.jpg)",
-        'hero-mobile': "url(/img/hero_image_mobile.jpg)",
+        'hero-bgc': "url(/img/hero_image.webp)",
+        'hero-tablet': "url(/img/hero_image_tablet.webp)",
+        'hero-mobile': "url(/img/hero_image_mobile.webp)",
       },
       // #0F0F0F
       colors: {
@@ -39,8 +40,10 @@ export default {
         'grey-light': '#AAAAAA',
         grey: '#6F6F6F',
         'grey-dark': '#474747',
+        'black-light': '#222222',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        'second-background': 'var(--second-background)',
       },
       fontFamily: {
         arial: ['Arial', 'Helvetica', 'sans-serif'],
@@ -49,5 +52,15 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('tailwindcss-motion')],
+  plugins: [require('@tailwindcss/forms'), require('tailwindcss-motion'),function ({ addUtilities }: PluginAPI) {
+    addUtilities({
+      ".base-text-style": {
+        "line-height": "1.16",
+        "letter-spacing": "0.03em",
+      },
+      ".calc": {
+        "flex-basis": "calc((100% - 2 * 24px) / 3)",
+      },
+    });
+  },],
 } satisfies Config;

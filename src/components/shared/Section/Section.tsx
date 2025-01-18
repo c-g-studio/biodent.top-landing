@@ -8,7 +8,7 @@ export const Section: FC<WithChildren & WithClassName> = ({
   children,
 }) => {
   return (
-    <section className={classnames('py-16 md:py-20', className)}>
+    <section className={classnames('py-16', className)}>
       <div className="container">{children}</div>
     </section>
   );
