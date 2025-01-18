@@ -25,6 +25,11 @@ export default {
         // xl: '1440px',
         // '2xl': '1440px',
       },
+      backgroundImage: {
+        'hero-bgc': "url(/img/hero_image.jpg)",
+        'hero-tablet': "url(/img/hero_image_tablet.jpg)",
+        'hero-mobile': "url(/img/hero_image_mobile.jpg)",
+      },
       // #0F0F0F
       colors: {
         'blue-extra-light': '#38BCEA',

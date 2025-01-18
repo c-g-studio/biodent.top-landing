@@ -19,7 +19,7 @@ export const Header = () => {
           <Calendar />
         </div>
         <Phone />
-        <Button>Замовити дзвінок</Button>
+        <Button className={'hidden'}>Замовити дзвінок</Button>
         <MobileMenu />
       </div>
     </header>
