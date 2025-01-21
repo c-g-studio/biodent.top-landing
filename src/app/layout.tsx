@@ -9,7 +9,10 @@ import { WithChildren } from '@/types/common';
 
 export default async function LocaleLayout({ children }: WithChildren) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto_mono.variable} `}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${roboto_mono.variable} overflow-x-hidden`}
+    >
       <body>
         <Header />
         {children}
