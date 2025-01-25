@@ -5,11 +5,11 @@ import React, { FC, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import {sendMessageToTelegram} from "@/services/orderService";
 
 type FormTypes = {
   className?: string;
 };
-// Тип данных формы
 type FormValues = {
   phone: string;
 };
@@ -33,8 +33,17 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
     }
   }, [errors.phone, clearErrors]);
 
-  const onSubmit = (data: FormValues) => {
-    console.log('data', data);
+  const onSubmit = async (data: FormValues) => {
+
+    const newPhone = String(data.phone).replaceAll(/\s+/g, '');
+
+    const telegramMessage = `
+        Заявка на звонок:
+        ${newPhone}
+      `;
+    await sendMessageToTelegram({
+      telegramMessage
+    });
   };
 
   return (
@@ -44,7 +53,7 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
           <PhoneInput
             placeholder="Телефон"
             international
-            countryCallingCodeEditable={false} // Запрещает редактирование кода страны
+            countryCallingCodeEditable={false}
             defaultCountry="UA"
             {...register('phone', {
               required: 'Номер телефона обязателен',
