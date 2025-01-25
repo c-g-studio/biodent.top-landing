@@ -30,6 +30,7 @@ export default {
         'hero-bgc': "url(/img/hero_image.webp)",
         'hero-tablet': "url(/img/hero_image_tablet.webp)",
         'hero-mobile': "url(/img/hero_image_mobile.webp)",
+        'custom-gradient': 'linear-gradient(to right, #E6F2FF 0%, #FAF1ED 100%)',
       },
       // #0F0F0F
       colors: {
