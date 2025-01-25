@@ -4,10 +4,10 @@ import { Navigation } from '@/components/layout/Header/Navigation/Navigation';
 import { GoogleMapLink } from '@/components/layout/Header/GoogleMapLink/GoogleMapLink';
 import { Calendar } from '@/components/layout/Header/Calendar/Calendar';
 import { Phone } from '@/components/layout/Header/Phone/Phone';
-import { Button } from '@/components/shared/Button/Button';
 import { MobileMenu } from '@/components/layout/Header/MobileMenu/MobileMenu';
 import { Typography } from '@/components/ui/Typography/Typography';
 import Link from 'next/link';
+import { GetCallModal } from '@/components/shared/GetCallModal/GetCallModal';
 
 export const Header = () => {
   return (
@@ -29,7 +29,7 @@ export const Header = () => {
           <Calendar />
         </div>
         <Phone className={'hidden md:flex md:gap-2'} />
-        <Button className={'hidden'}>Замовити дзвінок </Button>
+        <GetCallModal text={'Замовити дзвінок'} />
         <MobileMenu />
       </div>
     </header>

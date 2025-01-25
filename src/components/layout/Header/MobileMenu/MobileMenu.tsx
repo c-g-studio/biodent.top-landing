@@ -7,6 +7,7 @@ import { RiCloseLargeLine } from 'react-icons/ri';
 import { Navigation } from '@/components/layout/Header/Navigation/Navigation';
 import { SocialList } from '@/components/shared/SocialList/SocialList';
 import { Phone } from '@/components/layout/Header/Phone/Phone';
+// import { GetCallModal } from '@/components/shared/GetCallModal/GetCallModal';
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -40,6 +41,7 @@ export const MobileMenu = () => {
         <Navigation className={'flex flex-col gap-2'} setIsOpen={setIsOpen} />
         <SocialList className={'flex gap-2'} />
         <Phone className={'flex text-grey-light'} />
+        {/*<GetCallModal text={'Замовити дзвінок'} className={'block'} />*/}
       </nav>
     </>
   );

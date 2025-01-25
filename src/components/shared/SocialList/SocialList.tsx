@@ -22,8 +22,8 @@ export const SocialList: FC<TSocialListTypes & WithClassName> = ({
             <Image
               src={item.icon}
               alt={item.alt}
-              width={40}
-              height={40}
+              width={isFooter ? 40 : 20}
+              height={isFooter ? 40 : 20}
               className={`fill-blue-extra-light ${isFooter ? 'h-4 w-4 md:h-10 md:w-10' : ''} `}
             />
           </Link>
