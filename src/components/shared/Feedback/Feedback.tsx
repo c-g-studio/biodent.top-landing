@@ -58,7 +58,7 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
           alt="Happy girl"
           width={744}
           height={752}
-          className="absolute bottom-16 right-0 max-w-[300px] md:bottom-0 lg:max-w-full"
+          className="absolute bottom-[-4rem] right-0 max-w-[300px] md:bottom-0 lg:bottom-[-60px] lg:max-w-full"
         />
       </div>
     </Section>
