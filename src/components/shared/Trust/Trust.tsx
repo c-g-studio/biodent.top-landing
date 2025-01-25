@@ -10,7 +10,7 @@ export const Trust = (): React.JSX.Element => {
   const paragraphStyle = "text-black-light text-xl/[1.15] md:text-xl/[1.15] 2xl:text-2xl/[1.15] font-arial"
 
   return <Section className="bg-second-background py-[124px]">
-    <Typography variant={'h2'} className="mb-[60px] font-bold text-black-light text-5xl/[1.22]">
+    <Typography variant={'h2'} className="mb-[60px] font-bold text-black-light text-[42px]/[1.22] md:text-5xl/[1.22]">
       Нам доверяют пациенты
     </Typography>
     <ul className="flex flex-wrap gap-[24px]">
