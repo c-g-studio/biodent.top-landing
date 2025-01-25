@@ -6,12 +6,22 @@ import { Calendar } from '@/components/layout/Header/Calendar/Calendar';
 import { Phone } from '@/components/layout/Header/Phone/Phone';
 import { Button } from '@/components/shared/Button/Button';
 import { MobileMenu } from '@/components/layout/Header/MobileMenu/MobileMenu';
+import { Typography } from '@/components/ui/Typography/Typography';
+import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <header className="">
+    <header>
       <div className="container flex items-center justify-between py-8">
-        <Image src={'/img/logo.png'} alt={'Logo'} width={57} height={51} />
+        <Link href={'/'}>
+          <Image src={'/img/logo.png'} alt={'Logo'} width={57} height={51} />
+        </Link>
+        <Typography
+          className={'mb-0 text-4xl italic text-blue md:hidden'}
+          variant={'h2'}
+        >
+          Biodent
+        </Typography>
         <SocialList className={'hidden md:flex md:gap-4'} />
         <Navigation className={'hidden md:flex'} />
         <div className={'hidden items-center justify-center gap-5 xl:flex'}>
@@ -19,7 +29,7 @@ export const Header = () => {
           <Calendar />
         </div>
         <Phone className={'hidden md:flex md:gap-2'} />
-        <Button className={'hidden'}>Замовити дзвінок</Button>
+        <Button className={'hidden'}>Замовити дзвінок </Button>
         <MobileMenu />
       </div>
     </header>
