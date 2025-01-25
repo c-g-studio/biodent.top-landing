@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiCloseLargeLine } from 'react-icons/ri';
 import { Navigation } from '@/components/layout/Header/Navigation/Navigation';
+import { SocialList } from '@/components/shared/SocialList/SocialList';
+import { Phone } from '@/components/layout/Header/Phone/Phone';
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,16 +16,14 @@ export const MobileMenu = () => {
   };
 
   useEffect(() => {
-    // Блокировка скролла при открытии меню
     if (isOpen) {
-      document.body.classList.add('overflow-hidden');
+      document.documentElement.classList.add('overflow-hidden');
     } else {
-      document.body.classList.remove('overflow-hidden');
+      document.documentElement.classList.remove('overflow-hidden');
     }
 
-    // Сброс состояния при размонтировании
     return () => {
-      document.body.classList.remove('overflow-hidden');
+      document.documentElement.classList.remove('overflow-hidden');
     };
   }, [isOpen]);
 
@@ -35,9 +35,11 @@ export const MobileMenu = () => {
       <nav
         className={`fixed right-0 top-[121px] z-30 h-full w-full ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
-        } bg-blue-extra-dark p-4 transition-transform md:hidden`}
+        } flex flex-col gap-6 bg-blue-extra-dark p-4 transition-transform md:hidden`}
       >
-        <Navigation className={'flex flex-col gap-2'} />
+        <Navigation className={'flex flex-col gap-2'} setIsOpen={setIsOpen} />
+        <SocialList className={'flex gap-2'} />
+        <Phone className={'flex text-grey-light'} />
       </nav>
     </>
   );

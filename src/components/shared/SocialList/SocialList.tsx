@@ -6,7 +6,7 @@ import { WithClassName } from '@/types/common';
 
 export const SocialList: FC<WithClassName> = ({ className }) => {
   return (
-    <ul className={`hidden gap-4 md:flex ${className}`}>
+    <ul className={`${className}`}>
       {mockSocialsData.map(item => (
         <li key={item.id}>
           <Link href={item.link} target={'_blank'}>

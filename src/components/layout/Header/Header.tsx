@@ -12,13 +12,13 @@ export const Header = () => {
     <header className="">
       <div className="container flex items-center justify-between py-8">
         <Image src={'/img/logo.png'} alt={'Logo'} width={57} height={51} />
-        <SocialList />
+        <SocialList className={'hidden md:flex md:gap-4'} />
         <Navigation className={'hidden md:flex'} />
         <div className={'hidden items-center justify-center gap-5 xl:flex'}>
           <GoogleMapLink />
           <Calendar />
         </div>
-        <Phone />
+        <Phone className={'hidden md:flex md:gap-2'} />
         <Button className={'hidden'}>Замовити дзвінок</Button>
         <MobileMenu />
       </div>

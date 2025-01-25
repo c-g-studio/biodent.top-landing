@@ -1,14 +1,27 @@
-import { mockNavigationData } from '@/components/layout/Header/Navigation/mockNavigationData';
-import Link from 'next/link';
-import { WithClassName } from '@/types/common';
-import { FC } from 'react';
+'use client';
 
-export const Navigation: FC<WithClassName> = ({ className }) => {
+import { Dispatch, FC, SetStateAction } from 'react';
+import Link from 'next/link';
+
+import { mockNavigationData } from '@/components/layout/Header/Navigation/mockNavigationData';
+
+import { WithClassName } from '@/types/common';
+
+type TNavigationProps = {
+  setIsOpen?: Dispatch<SetStateAction<boolean>>;
+};
+
+export const Navigation: FC<TNavigationProps & WithClassName> = ({
+  className,
+  setIsOpen = () => {},
+}) => {
   return (
-    <ul className={`gap-9 font-roboto text-grey-light ${className}`}>
+    <ul className={`gap-2 font-roboto text-grey-light ${className}`}>
       {mockNavigationData.map(item => (
         <li key={item.id} className={'transition-all hover:text-blue'}>
-          <Link href={item.link}>{item.title}</Link>
+          <Link href={item.link} onClick={() => setIsOpen(false)}>
+            {item.title}
+          </Link>
         </li>
       ))}
     </ul>
