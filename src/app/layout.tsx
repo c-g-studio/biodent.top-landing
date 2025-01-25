@@ -14,7 +14,7 @@ export default async function LocaleLayout({ children }: WithChildren) {
       className={`${inter.variable} ${roboto_mono.variable} overflow-x-hidden`}
     >
       <body>
-        {/*<Header />*/}
+        <Header />
         {children}
         <Footer />
       </body>
