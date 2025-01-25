@@ -11,7 +11,7 @@ export default async function LocaleLayout({ children }: WithChildren) {
   return (
     <html lang="en" className={`${inter.variable} ${roboto_mono.variable} `}>
       <body>
-        <Header />
+        {/*<Header />*/}
         {children}
         <Footer />
       </body>
