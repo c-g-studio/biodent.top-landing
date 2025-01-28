@@ -1,15 +1,16 @@
 'use client';
 import { Button } from '@/components/shared/Button/Button';
+import { sendMessageToTelegram } from '@/services/orderService';
 
 import React, { FC, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import toast, { Toaster } from 'react-hot-toast';
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
 type FormTypes = {
   className?: string;
 };
-// Тип данных формы
 type FormValues = {
   phone: string;
 };
@@ -33,8 +34,23 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
     }
   }, [errors.phone, clearErrors]);
 
-  const onSubmit = (data: FormValues) => {
-    console.log('data', data);
+  const onSubmit = async (data: FormValues) => {
+    try {
+      const newPhone = String(data.phone).replaceAll(/\s+/g, '');
+
+      const telegramMessage = `
+        Заявка на звонок:
+        ${newPhone}
+      `;
+      await sendMessageToTelegram({
+        telegramMessage,
+      });
+      toast.success('Заявка успешно отправлена');
+    } catch {
+      toast.error(
+        'К сожалению что-то пошло не так, позвоните нам по указанному номеру телефона',
+      );
+    }
   };
 
   return (
@@ -44,7 +60,7 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
           <PhoneInput
             placeholder="Телефон"
             international
-            countryCallingCodeEditable={false} // Запрещает редактирование кода страны
+            countryCallingCodeEditable={false}
             defaultCountry="UA"
             {...register('phone', {
               required: 'Номер телефона обязателен',
@@ -71,6 +87,7 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
           Записаться на прием
         </Button>
       </div>
+      <Toaster />
     </form>
   );
 };
