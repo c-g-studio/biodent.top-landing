@@ -1,11 +1,12 @@
 'use client';
 import { Button } from '@/components/shared/Button/Button';
+import { sendMessageToTelegram } from '@/services/orderService';
 
 import React, { FC, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import toast, { Toaster } from 'react-hot-toast';
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
-import {sendMessageToTelegram} from "@/services/orderService";
 
 type FormTypes = {
   className?: string;
@@ -34,16 +35,22 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
   }, [errors.phone, clearErrors]);
 
   const onSubmit = async (data: FormValues) => {
+    try {
+      const newPhone = String(data.phone).replaceAll(/\s+/g, '');
 
-    const newPhone = String(data.phone).replaceAll(/\s+/g, '');
-
-    const telegramMessage = `
+      const telegramMessage = `
         Заявка на звонок:
         ${newPhone}
       `;
-    await sendMessageToTelegram({
-      telegramMessage
-    });
+      await sendMessageToTelegram({
+        telegramMessage,
+      });
+      toast.success('Заявка успешно отправлена');
+    } catch {
+      toast.error(
+        'К сожалению что-то пошло не так, позвоните нам по указанному номеру телефона',
+      );
+    }
   };
 
   return (
@@ -80,6 +87,7 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
           Записаться на прием
         </Button>
       </div>
+      <Toaster />
     </form>
   );
 };

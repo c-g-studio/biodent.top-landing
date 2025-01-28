@@ -9,7 +9,7 @@ html {
 :root {
   --background: #fff;
   --foreground: #6f6f6f;
-  --second-background: #FBFBFB;
+  --second-background: #fbfbfb;
 }
 
 body {
@@ -22,10 +22,10 @@ body {
   border-color: transparent;
   transition: border-color 300ms linear;
 }
-.PhoneInputInput:hover, .PhoneInputInput:focus {
-  border-color: #38BCEA;
+.PhoneInputInput:hover,
+.PhoneInputInput:focus {
+  border-color: #38bcea;
 }
 .PhoneInput .PhoneInputCountry {
   display: none; /* Скрываем флаг */
 }
-

@@ -1,9 +1,9 @@
-import React from 'react';
+import { Form } from '@/components/shared/Form/Form';
 import { Section } from '@/components/shared/Section/Section';
 import { Typography } from '@/components/ui/Typography/Typography';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Form } from '@/components/shared/Form/Form';
+import React from 'react';
 
 type FeedbackTypes = {
   sectionFlag?: 'first' | 'second';
@@ -19,7 +19,7 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
 
   return (
     <Section
-      className={`bg-custom-gradient relative py-[62px] ${sectionFlag === 'first' ? 'md:mt-28' : ''} `}
+      className={`relative bg-custom-gradient py-[62px] ${sectionFlag === 'first' ? 'md:mt-28' : ''} `}
     >
       <div className="relative w-full">
         <div className="relative z-10">
@@ -34,23 +34,21 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
             variant={'p'}
             className="mb-[37px] max-w-[527px] font-arial text-xl/[1.29] text-black-light md:text-2xl/[1.29]"
           >
-            {' '}
             Укажите вой номер телефона, мы перезвоним и подберем для вас удобное
-            время приёма. Или позвоните нам сами —{' '}
+            время приёма. Или позвоните нам сами —
             <Link href="tel:+79003331040" className="text-[#0079FF]">
               +79003331040
-            </Link>{' '}
+            </Link>
           </Typography>
           <Form className="mb-[37px] flex items-start gap-5" />
           <Typography
             variant={'p'}
             className="max-w-[527px] font-arial text-xl/[1.15] text-[#4E4E4E] sm:text-[18px]/[1.27] md:text-[18px]/[1.27] 2xl:text-2xl/[1.15]"
           >
-            {' '}
-            Записываясь на услугу вы даёте согласие на{' '}
+            Записываясь на услугу вы даёте согласие на
             <Link href="#" className="underline">
               обработку своих персональных данных
-            </Link>{' '}
+            </Link>
           </Typography>
         </div>
         <Image
@@ -58,7 +56,7 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
           alt="Happy girl"
           width={744}
           height={752}
-          className="absolute bottom-[-4rem] right-0 max-w-[300px] md:bottom-0 lg:bottom-[-60px] lg:max-w-full"
+          className="absolute bottom-[110px] right-0 max-w-[300px] md:bottom-0 lg:bottom-[-60px] lg:h-auto lg:max-w-[744px]"
         />
       </div>
     </Section>
