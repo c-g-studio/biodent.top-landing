@@ -35,8 +35,8 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
             className="mb-[37px] max-w-[527px] font-arial text-xl/[1.29] text-black-light md:text-2xl/[1.29]"
           >
             Укажите вой номер телефона, мы перезвоним и подберем для вас удобное
-            время приёма. Или позвоните нам сами —
-            <Link href="tel:+79003331040" className="text-[#0079FF]">
+            время приёма. Или позвоните нам сами —{' '}
+            <Link href="tel:+79003331040" className="text-[#0079FF] transition-colors hover:text-blue">
               +79003331040
             </Link>
           </Typography>
@@ -45,8 +45,8 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
             variant={'p'}
             className="max-w-[527px] font-arial text-xl/[1.15] text-[#4E4E4E] sm:text-[18px]/[1.27] md:text-[18px]/[1.27] 2xl:text-2xl/[1.15]"
           >
-            Записываясь на услугу вы даёте согласие на
-            <Link href="#" className="underline">
+            Записываясь на услугу вы даёте согласие на{' '}
+            <Link href="#" className="underline transition-colors hover:text-blue-extra-light">
               обработку своих персональных данных
             </Link>
           </Typography>

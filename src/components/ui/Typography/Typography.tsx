@@ -22,8 +22,9 @@ export const Typography: FC<Props> = ({
       className={classnames(
         'font-inter text-xs font-normal text-zinc-200 md:text-sm',
         {
-          'text-blue-extra-dark text-6xl font-bold md:text-5xl/[1.04]': variant === 'h1',
-          'mb-6 text-2xl font-medium md:text-5xl lg:mb-12': variant === 'h2',
+          'text-6xl font-bold text-blue-extra-dark md:text-5xl/[1.04]':
+            variant === 'h1',
+          'text-2xl font-medium md:text-5xl': variant === 'h2',
           'text-base font-medium md:text-lg': variant === 'h3',
         },
         className,
