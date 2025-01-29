@@ -19,7 +19,7 @@ body {
 }
 
 .PhoneInputInput {
-  border-color: transparent;
+  border-color: #fff;
   transition: border-color 300ms linear;
 }
 .PhoneInputInput:hover,
