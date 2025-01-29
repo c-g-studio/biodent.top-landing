@@ -29,7 +29,7 @@ export const Header = () => {
           <Calendar />
         </div>
         <Phone className={'hidden md:flex md:gap-2'} />
-        <GetCallModal text={'Замовити дзвінок'} />
+        <GetCallModal text={'Замовити дзвінок'} className="hidden"/>
         <MobileMenu />
       </div>
     </header>

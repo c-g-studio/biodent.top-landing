@@ -4,6 +4,8 @@ import React, { ChangeEvent, FC, FormEvent, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@headlessui/react';
 import { WithClassName } from '@/types/common';
+import {sendMessageToTelegram} from "@/services/orderService";
+import toast, {Toaster} from "react-hot-toast";
 
 type TGetCallModalProps = {
   text: string;
@@ -21,9 +23,24 @@ export const GetCallModal: FC<TGetCallModalProps & WithClassName> = ({
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    alert(`Имя: ${formData.name}, Телефон: ${formData.phone}`);
+    try {
+      const newPhone = String(formData.phone).replaceAll(/\s+/g, '');
+      const telegramMessage = `
+        Заявка на звонок:
+        ${formData.name}
+        ${newPhone}
+      `;
+      await sendMessageToTelegram({
+        telegramMessage,
+      });
+      toast.success('Заявка успешно отправлена');
+    } catch {
+      toast.error(
+        'К сожалению что-то пошло не так, позвоните нам по указанному номеру телефона',
+      );
+    }
     setIsOpen(false);
   };
 
@@ -31,7 +48,7 @@ export const GetCallModal: FC<TGetCallModalProps & WithClassName> = ({
     <>
       <Button
         onClick={() => setIsOpen(true)}
-        className={`hidden rounded-[4px] bg-blue-extra-light px-2 py-3 text-white transition-all hover:bg-blue md:block ${className}`}
+        className={`rounded-[4px] bg-blue-extra-light px-2 py-3 text-white transition-all hover:bg-blue md:block ${className}`}
       >
         {text}
       </Button>
@@ -102,6 +119,7 @@ export const GetCallModal: FC<TGetCallModalProps & WithClassName> = ({
               </div>
             </form>
           </motion.div>
+          <Toaster />
         </div>
       )}
     </>
