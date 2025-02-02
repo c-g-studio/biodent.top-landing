@@ -51,7 +51,7 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
           >
             Записываясь на услугу вы даёте согласие на{' '}
             <Link
-              href="#"
+              href="/privacy-policy"
               className="underline transition-colors hover:text-blue-extra-light"
             >
               обработку своих персональных данных
