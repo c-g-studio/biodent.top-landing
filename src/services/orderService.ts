@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BOT_URL = 'http://localhost:3001';
+const BOT_URL = process.env.NEXT_PUBLIC_BOT_URL;
 
 type TypeMessage = {
   telegramMessage: string;
