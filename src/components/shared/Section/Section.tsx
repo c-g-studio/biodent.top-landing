@@ -3,12 +3,17 @@ import React, { FC } from 'react';
 
 import { WithChildren, WithClassName } from '@/types/common';
 
-export const Section: FC<WithChildren & WithClassName> = ({
+type TSectionProps = {
+  id?: string;
+};
+
+export const Section: FC<WithChildren & WithClassName & TSectionProps> = ({
   className,
+  id = '',
   children,
 }) => {
   return (
-    <section className={classnames('py-16', className)}>
+    <section className={classnames('py-16', className)} id={id}>
       <div className="container">{children}</div>
     </section>
   );

@@ -19,7 +19,8 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
 
   return (
     <Section
-      className={`relative bg-custom-gradient py-[62px] ${sectionFlag === 'first' ? 'md:mt-28' : ''} `}
+      className={`relative bg-custom-gradient py-[62px] ${sectionFlag === 'first' ? 'md:mt-28' : ''}`}
+      id={'contacts'}
     >
       <div className="relative w-full">
         <div className="relative z-10">
@@ -36,8 +37,11 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
           >
             Укажите вой номер телефона, мы перезвоним и подберем для вас удобное
             время приёма. Или позвоните нам сами —{' '}
-            <Link href="tel:+79003331040" className="text-[#0079FF] transition-colors hover:text-blue">
-              +79003331040
+            <Link
+              href="tel:+380980389278"
+              className="text-[#0079FF] transition-colors hover:text-blue"
+            >
+              +380980389278
             </Link>
           </Typography>
           <Form className="mb-[37px] flex items-start gap-5" />
@@ -46,7 +50,10 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
             className="max-w-[527px] font-arial text-xl/[1.15] text-[#4E4E4E] sm:text-[18px]/[1.27] md:text-[18px]/[1.27] 2xl:text-2xl/[1.15]"
           >
             Записываясь на услугу вы даёте согласие на{' '}
-            <Link href="#" className="underline transition-colors hover:text-blue-extra-light">
+            <Link
+              href="#"
+              className="underline transition-colors hover:text-blue-extra-light"
+            >
               обработку своих персональных данных
             </Link>
           </Typography>
@@ -56,7 +63,7 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
           alt="Happy girl"
           width={744}
           height={752}
-          className="absolute bottom-[110px] right-0 max-w-[300px] md:bottom-0 lg:bottom-[-60px] lg:h-auto lg:max-w-[744px]"
+          className="absolute bottom-[-61px] right-0 max-w-[300px] lg:bottom-[-60px] lg:h-auto lg:max-w-[744px]"
         />
       </div>
     </Section>

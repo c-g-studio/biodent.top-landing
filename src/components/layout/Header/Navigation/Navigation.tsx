@@ -16,7 +16,7 @@ export const Navigation: FC<TNavigationProps & WithClassName> = ({
   setIsOpen = () => {},
 }) => {
   return (
-    <ul className={`gap-2 font-roboto text-grey-light ${className}`}>
+    <ul className={`gap-5 font-roboto text-grey-light ${className}`}>
       {mockNavigationData.map(item => (
         <li key={item.id} className={'transition-all hover:text-blue'}>
           <Link href={item.link} onClick={() => setIsOpen(false)}>

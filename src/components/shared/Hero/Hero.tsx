@@ -11,7 +11,10 @@ export const Hero = () => {
         <Typography variant="p" className="mb-[18px] text-xl/[1.15] text-grey">
           — Стоматология в Чебоксарах
         </Typography>
-        <Typography variant="h1" className="mb-5 max-w-[364px]">
+        <Typography
+          variant="h2"
+          className="mb-5 max-w-[364px] text-6xl font-bold text-blue-extra-dark md:text-5xl/[1.04]"
+        >
           Лечение зубов в тот же день
         </Typography>
         <Typography variant="p" className="mb-9 text-xl/[1.15] text-grey">

@@ -4,8 +4,10 @@ import React, { ChangeEvent, FC, FormEvent, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@headlessui/react';
 import { WithClassName } from '@/types/common';
-import {sendMessageToTelegram} from "@/services/orderService";
-import toast, {Toaster} from "react-hot-toast";
+import { sendMessageToTelegram } from '@/services/orderService';
+import toast, { Toaster } from 'react-hot-toast';
+import { Typography } from '@/components/ui/Typography/Typography';
+import Link from 'next/link';
 
 type TGetCallModalProps = {
   text: string;
@@ -101,7 +103,15 @@ export const GetCallModal: FC<TGetCallModalProps & WithClassName> = ({
                   className="focus:border-blue-500 focus:ring-blue-500 mt-1 block w-full rounded-md border-gray-300 shadow-sm"
                 />
               </div>
-
+              <Typography variant={'p'} className={'text-[10px] text-grey'}>
+                Заповнючи форму ви погоджуєтесь з
+                <Link
+                  href={'/privacy-policy'}
+                  className={'ml-1 text-[10px] underline hover:text-blue'}
+                >
+                  Політикою конфедеційност
+                </Link>
+              </Typography>
               <div className="flex justify-center gap-1 space-x-2">
                 <Button
                   type="button"

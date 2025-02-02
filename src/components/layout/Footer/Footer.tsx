@@ -9,9 +9,15 @@ export const Footer = async () => {
       <footer
         className={`container flex items-center justify-between py-4 lg:py-10`}
       >
-        <SocialList className={'flex mr-4 md:mr-0 gap-2 md:gap-9'} variant={'footer'} />
-        <Link href={'/'}>
-          <Typography variant={'h3'} className={'text-black-light underline'}>
+        <SocialList
+          className={'mr-4 flex gap-2 md:mr-0 md:gap-9'}
+          variant={'footer'}
+        />
+        <Link href={'/privacy-policy'}>
+          <Typography
+            variant={'h3'}
+            className={'text-center text-[12px] text-black-light underline'}
+          >
             Ознайомитись з політика конфедеційності
           </Typography>
         </Link>
