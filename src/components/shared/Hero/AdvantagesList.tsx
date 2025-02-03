@@ -23,7 +23,7 @@ export const AdvantagesList = () => {
             variant="p"
             className="max-w-[290px] text-center text-[18px]/[1.11] text-grey-dark md:text-start xl:text-[16px]/[1.11] 2xl:text-[18px]/[1.11]"
           >
-            Команда квалифицированных специалистов
+            Команда кваліфікованих фахівців
           </Typography>
         </div>
       </li>
@@ -44,7 +44,7 @@ export const AdvantagesList = () => {
             variant="p"
             className="text-center text-[18px]/[1.11] text-grey-dark md:text-start xl:text-[16px]/[1.11] 2xl:text-[18px]/[1.11]"
           >
-            3 стоматологических кабинета
+            Сучасний стоматологічний кабінет
           </Typography>
         </div>
       </li>
@@ -65,7 +65,7 @@ export const AdvantagesList = () => {
             variant="p"
             className="text-center text-[18px]/[1.11] text-grey-dark md:text-start xl:text-[16px]/[1.11] 2xl:text-[18px]/[1.11]"
           >
-            Удобное расположение
+            Зручне розташування
           </Typography>
         </div>
       </li>

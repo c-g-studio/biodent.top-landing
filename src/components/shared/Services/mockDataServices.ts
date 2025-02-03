@@ -5,27 +5,27 @@ export interface Service {
 export const mockDataForServices: Service[] = [
   {
     imgPath: '/img/icons/services/servicesSprite.svg#icon-treatment',
-    description: 'Лечение зубов',
+    description: 'Лікування зубів',
   },
   {
     imgPath: '/img/icons/services/servicesSprite.svg#icon-hygiene',
-    description: 'Гигиена',
-  },
-  {
-    imgPath: '/img/icons/services/servicesSprite.svg#icon-braces',
-    description: 'Брекеты',
+    description: 'Гігієна',
   },
   {
     imgPath: '/img/icons/services/servicesSprite.svg#icon-childrens',
-    description: 'Протезирование',
+    description: 'Естетичне протезування',
+  },
+  {
+    imgPath: '/img/icons/services/servicesSprite.svg#icon-childrens',
+    description: 'Знімне протезування',
   },
   {
     imgPath: '/img/icons/services/servicesSprite.svg#icon-implants',
-    description: 'Импланты',
+    description: 'Імпланти',
   },
   {
     imgPath: '/img/icons/services/servicesSprite.svg#icon-veneers',
-    description: 'Виниры',
+    description: 'Вініри',
   },
   {
     imgPath: '/img/icons/services/servicesSprite.svg#icon-crowns',
@@ -33,6 +33,6 @@ export const mockDataForServices: Service[] = [
   },
   {
     imgPath: '/img/icons/services/servicesSprite.svg#icon-surgery',
-    description: 'Хирургия',
+    description: 'Хірургія',
   },
 ];

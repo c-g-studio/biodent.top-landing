@@ -8,7 +8,7 @@ export const Calendar = () => (
       width={20}
       height={20}
     />
-    <p className={'font-arial text-blue-dark'}>с 09:00 - 20:00</p>
+    <p className={'font-arial text-blue-dark'}>с 08:00 - 20:00</p>
     <p className={'font-arial text-grey-light'}>пн-сб</p>
   </div>
 );

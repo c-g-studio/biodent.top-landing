@@ -18,7 +18,7 @@ export const Trust = (): React.JSX.Element => {
         variant={'h2'}
         className="mb-[60px] text-[42px]/[1.22] font-bold text-black-light md:text-5xl/[1.22]"
       >
-        Нам доверяют пациенты
+        Нам довіряють пацієнти
       </Typography>
       <ul className="flex flex-wrap gap-[24px]">
         <li className={listItemStyle}>
@@ -26,10 +26,10 @@ export const Trust = (): React.JSX.Element => {
             1
           </Typography>
           <Typography variant={'h3'} className={h3TitleStyle}>
-            Честные цены, без хитрых уловок
+            Чесні ціни
           </Typography>
           <Typography variant={'p'} className={paragraphStyle}>
-            Фиксируем цены в плане лечения, не повышаем в процессе.
+            Фіксуємо ціни у плані лікування, не підвищуємо у процесі.
           </Typography>
         </li>
         <li className={listItemStyle}>
@@ -37,11 +37,11 @@ export const Trust = (): React.JSX.Element => {
             2
           </Typography>
           <Typography variant={'h3'} className={h3TitleStyle}>
-            Опытные Врачи
+            Досвідчені фахівці
           </Typography>
           <Typography variant={'p'} className={paragraphStyle}>
-            Врачи постоянно совершенствуются в своей специальности, несмотря на
-            богатый опыт работы.
+            Лікарі постійно вдосконалюються у своїй спеціальності, незважаючи на
+            багатий досвід роботи.
           </Typography>
         </li>
         <li className={listItemStyle}>
@@ -49,11 +49,11 @@ export const Trust = (): React.JSX.Element => {
             3
           </Typography>
           <Typography variant={'h3'} className={h3TitleStyle}>
-            Комфортные условия
+            Комфортні умови
           </Typography>
           <Typography variant={'p'} className={paragraphStyle}>
-            Уютная обстановка и отзывчивый персонал сделают поход к стоматологу
-            максимально приятным.
+            Затишна обстановка та чуйний персонал зроблять похід до стоматолога
+            максимально приємним.
           </Typography>
         </li>
       </ul>

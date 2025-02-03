@@ -37,10 +37,10 @@ export const GetCallModal: FC<TGetCallModalProps & WithClassName> = ({
       await sendMessageToTelegram({
         telegramMessage,
       });
-      toast.success('Заявка успешно отправлена');
+      toast.success('Заявка успішно відправлена');
     } catch {
       toast.error(
-        'К сожалению что-то пошло не так, позвоните нам по указанному номеру телефона',
+        'Нажаль сталася помилка. Зателефонуйте нам за номером - 380980389278',
       );
     }
     setIsOpen(false);

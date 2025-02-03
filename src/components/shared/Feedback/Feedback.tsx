@@ -14,8 +14,8 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
     sectionFlag === 'first' ? '/img/first_girl.webp' : '/img/second_girl.webp';
   const sectionTitle =
     sectionFlag === 'first'
-      ? 'При фиксации брекетов на обе челюсти получи сертификат на 7000 рублей'
-      : 'Онлайн консультация специалиста по аудио и видео связи, Бесплатно.';
+      ? 'Записуйтесь на прийом і отримуйте якісне лікування'
+      : 'Під час онлайн запису, консультація безкоштовна';
 
   return (
     <Section
@@ -35,8 +35,8 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
             variant={'p'}
             className="mb-[37px] max-w-[527px] font-arial text-xl/[1.29] text-black-light md:text-2xl/[1.29]"
           >
-            Укажите вой номер телефона, мы перезвоним и подберем для вас удобное
-            время приёма. Или позвоните нам сами —{' '}
+            Вкажіть свій номер телефону, ми передзвонимо і виберемо зручний для
+            вас час прийому. Або зателефонуйте нам самостійно -{' '}
             <Link
               href="tel:+380980389278"
               className="text-[#0079FF] transition-colors hover:text-blue"
@@ -49,12 +49,12 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
             variant={'p'}
             className="max-w-[527px] font-arial text-xl/[1.15] text-[#4E4E4E] sm:text-[18px]/[1.27] md:text-[18px]/[1.27] 2xl:text-2xl/[1.15]"
           >
-            Записываясь на услугу вы даёте согласие на{' '}
+            Записуючись на послугу, ви погоджуєтесь{' '}
             <Link
               href="/privacy-policy"
               className="underline transition-colors hover:text-blue-extra-light"
             >
-              обработку своих персональных данных
+              обработку своїх персональних данних
             </Link>
           </Typography>
         </div>

@@ -31,21 +31,20 @@ export const Footer = async () => {
           />
         </Link>
       </footer>
-      <Typography
-        variant={'h3'}
-        className={
-          'border-blue-grey-light border-t py-2 text-center text-[12px] text-grey-light'
-        }
-      >
-        Developed by{' '}
-        <Link
-          href={'https://coding-gods.com'}
-          className={'underline'}
-          target={'_blank'}
-        >
-          coding-gods.com
-        </Link>
-      </Typography>
+      {/*<Typography*/}
+      {/*  variant={'h3'}*/}
+      {/*  className={*/}
+      {/*    'border-blue-grey-light border-t py-2 text-center text-[12px] text-grey-light'*/}
+      {/*  }*/}
+      {/*>*/}
+      {/*  Developed by{' '}*/}
+      {/*  <Link*/}
+      {/*    href={'https://coding-gods.com'}*/}
+      {/*    className={'underline'}*/}
+      {/*    target={'_blank'}*/}e{/*  >*/}
+      {/*    coding-gods.com*/}
+      {/*  </Link>*/}
+      {/*</Typography>*/}
     </>
   );
 };

@@ -39,16 +39,16 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
       const newPhone = String(data.phone).replaceAll(/\s+/g, '');
 
       const telegramMessage = `
-        Заявка на звонок:
+        Заявка на дзвінок:
         ${newPhone}
       `;
       await sendMessageToTelegram({
         telegramMessage,
       });
-      toast.success('Заявка успешно отправлена');
+      toast.success('Ми успішно отримали вашу заявку');
     } catch {
       toast.error(
-        'К сожалению что-то пошло не так, позвоните нам по указанному номеру телефона',
+        'Нажаль щось пішло не так, зателефонуйте по номеру телефону - ',
       );
     }
   };
@@ -63,10 +63,10 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
             countryCallingCodeEditable={false}
             defaultCountry="UA"
             {...register('phone', {
-              required: 'Номер телефона обязателен',
+              required: `Номер телефона обов'язковий`,
               validate: value =>
                 isValidPhoneNumber(value || '') ||
-                'Введите корректный номер телефона',
+                'Введіть коректний номер телефону',
             })}
             onChange={value => setValue('phone', value || '')}
             className="focus:ring-blue-500 w-full rounded focus:outline-none focus:ring-2"
@@ -81,10 +81,10 @@ export const Form: FC<FormTypes> = ({ className }): React.JSX.Element => {
 
         <Button
           type="submit"
-          aria="Отправка заполненных данных с формы"
+          aria="Відправка данних з форми"
           className="py-2.5"
         >
-          Записаться на прием
+          Записатися на прийом
         </Button>
       </div>
       <Toaster />
