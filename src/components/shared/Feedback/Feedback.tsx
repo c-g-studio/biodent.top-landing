@@ -44,7 +44,7 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
               +380980389278
             </Link>
           </Typography>
-          <Form className="mb-[37px] flex items-start gap-5" />
+          <Form className="mb-[75px] flex items-start gap-5" />
           <Typography
             variant={'p'}
             className="max-w-[527px] font-arial text-xl/[1.15] text-[#4E4E4E] sm:text-[18px]/[1.27] md:text-[18px]/[1.27] 2xl:text-2xl/[1.15]"
@@ -54,7 +54,7 @@ export const Feedback: React.FC<FeedbackTypes> = ({ sectionFlag }) => {
               href="/privacy-policy"
               className="underline transition-colors hover:text-blue-extra-light"
             >
-              обработку своїх персональних данних
+              на обробку своїх персональних данних
             </Link>
           </Typography>
         </div>
