@@ -41,7 +41,8 @@ export const Footer = async () => {
       {/*  <Link*/}
       {/*    href={'https://coding-gods.com'}*/}
       {/*    className={'underline'}*/}
-      {/*    target={'_blank'}*/}e{/*  >*/}
+      {/*    target={'_blank'}*/}
+      {/*  >*/}
       {/*    coding-gods.com*/}
       {/*  </Link>*/}
       {/*</Typography>*/}
